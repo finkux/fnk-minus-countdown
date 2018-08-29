@@ -1,0 +1,56 @@
+{
+  "name": "minus-countdown",
+  "version": "1.0.0",
+  "description": "Minimal jquery countdown plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finkux/fnk-minus-countdown.git"
+  },
+  "keywords": [
+    "countdown",
+    "jquery",
+    "plugin",
+    "minimal",
+    "js",
+    "amd",
+    "requirejs"
+  ],
+  "author": "Alberto Córcoles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/finkux/fnk-minus-countdown/issues"
+  },
+  "homepage": "https://github.com/finkux/fnk-minus-countdown#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "bs-console-qrcode": "^1.0.0",
+    "es6-promise": "^4.1.0",
+    "find-node-modules": "^1.0.4",
+    "fnk-sass-tools": "git+https://github.com/finkux/fnk-sass-tools.git",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-if": "^2.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-lint": "^1.3.2",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-svg-symbols": "^3.1.1",
+    "gulp-svgo": "^1.5.4",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.8",
+    "gulp-wrap": "^0.14.0",
+    "gulp-zip": "^4.1.0",
+    "pump": "^1.0.2",
+    "yargs": "^7.1.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
