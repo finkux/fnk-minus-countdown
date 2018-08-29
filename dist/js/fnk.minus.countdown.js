@@ -48,6 +48,7 @@
                 var now = new Date();
                 var distance = end - now;
                 settings.isActive.call(this);
+
       
                 if (distance < 0) {    
                     clearInterval(timer);                
@@ -61,15 +62,21 @@
                 var minutes = addZ( Math.floor((distance % _hour) / _minute) );
                 var seconds = addZ( Math.floor( (distance % _minute) / _second) );
        
-                var remainDate = '<span class="' +  settings.classNum + ' ' + settings.classDays + '"><span>' + days + '</span><span class="countdown__label">' + settings.labelsStr.days +'</span></span>';
-                    remainDate += '<span class="countdown-dots">:</span>';
-                    remainDate += '<span class="' + settings.classNum + ' ' + settings.classHours + '"><span>' + hours + '</span><span class="countdown__label">' + settings.labelsStr.hours +'</span></span>';
-                    remainDate += '<span class="countdown-dots">:</span>';
-                    remainDate += '<span class="' + settings.classNum + ' ' + settings.classMin + '"><span>' + minutes + '</span><span class="countdown__label">' + settings.labelsStr.minutes +'</span></span>';
-                    remainDate += '<span class="countdown-dots">:</span>';
-                    remainDate += '<span class="' + settings.classNum + ' ' + settings.classSec + '"><span>' + seconds + '</span><span class="countdown__label">' + settings.labelsStr.seconds +'</span></span>';
+                var remainDate = '<div class="fnk-minus-cd">'
+                    remainDate += '<span class="' +  settings.classNum + ' ' + settings.classDays + '"><span>' + days + '</span><span class="fnk-minus-cd__label">' + settings.labelsStr.days +'</span></span>';
+                    remainDate += '<span class="fnk-minus-cd__dots">:</span>';
+                    remainDate += '<span class="' + settings.classNum + ' ' + settings.classHours + '"><span>' + hours + '</span><span class="fnk-minus-cd__label">' + settings.labelsStr.hours +'</span></span>';
+                    remainDate += '<span class="fnk-minus-cd__dots">:</span>';
+                    remainDate += '<span class="' + settings.classNum + ' ' + settings.classMin + '"><span>' + minutes + '</span><span class="fnk-minus-cd__label">' + settings.labelsStr.minutes +'</span></span>';
+                    remainDate += '<span class="fnk-minus-cd__dots">:</span>';
+                    remainDate += '<span class="' + settings.classNum + ' ' + settings.classSec + '"><span>' + seconds + '</span><span class="fnk-minus-cd__label">' + settings.labelsStr.seconds +'</span></span>';
+                    remainDate += '</div>';
                 
                 element.html(remainDate);  
+                
+                if( settings.stopTimer ) {
+                    clearInterval(timer);
+                }
             }
        
             function addZ(n){return n < 10? '0'+n:''+n;}

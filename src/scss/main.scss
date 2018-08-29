@@ -1,4 +1,27 @@
-body {
-    margin: 0;
-    background: white;
+$fnk-minus-cd-family-type: 'Helvetica', 'Arial', sans-serif !default;
+$fnk-minus-cd-color: #000000 !default;
+$fnk-minus-cd-size-num: 1.8rem !default;
+$fnk-minus-cd-size-label: 0.8rem !default;
+
+%base-fnk-minus-cd-typo {
+    font-family: $fnk-minus-cd-family-type;
+    font-size: $fnk-minus-cd-size-num;
+    color: $fnk-minus-cd-color;
+}
+
+.fnk-minus-cd {
+    outline: 1px dashed;
+    display: flex;
+    flex-direction: row;
+    @extend %base-fnk-minus-cd-typo;
+}
+
+.fnk-minus-cd-num {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.fnk-minus-cd__label {
+    font-size: $fnk-minus-cd-size-label;
 }

@@ -48,8 +48,8 @@ const settings = {
         icons: './src/assets/svg-icons/'
     },
     sass: {
-        name: 'styles',
-        src: './src/scss/*/**.scss',
+        name: 'fnk.minus.countdown.css',
+        src: './src/scss/main.scss',
         lint: 'sass-lint.json',
         dest: 'css/'
     },
@@ -100,9 +100,10 @@ gulp.task('sass', ['sass-lint'], function() {
         .pipe(autoprefix('last 2 versions'))
         .pipe(gulpif(argv.dev, sourcemaps.write()))
         .pipe(gulp.dest( settings.dist + settings.sass.dest ))
+        .pipe(rename( settings.sass.name ))
         .pipe(gulpif(argv.prod, cssnano()))
         .pipe(gulpif(argv.prod, rename({suffix:'.min'})))
-        .pipe(gulp.dest( settings.dist + settings.sass.dest ));		
+        .pipe(gulp.dest( settings.dist + settings.sass.dest ));
   });
   
 

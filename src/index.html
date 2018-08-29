@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Demo Minus Countdown</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="../dist/css/fnk.minus.countdown.css">
 </head>
 <body>
     <div id="countdown-demo"></div>
-    <div id="demo-2" style="margin: 50px;"></div>
+    <div id="demo-2"></div>
     <!-- scripts -->
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../dist/js/fnk.minus.countdown.js"></script>
@@ -17,6 +17,10 @@
         $('document').ready(function(){
             $('#countdown-demo').fnkMinusCountDown({
                 targetDate: "09/01/2018 9:30 UTC+2",
+            });
+
+            $('#demo-2').fnkMinusCountDown({
+                targetDate: "10/15/2018 9:30 UTC+2",
                 stopTimer: true
             });
         });
